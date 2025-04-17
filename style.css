@@ -568,3 +568,55 @@ body {
 .social-icons a:hover {
   color: #00bfff;
 }
+/* SEÇÃO DE WEB APPS */
+.webapps {
+  padding: 100px 0;
+  background-color: #0d1117;
+  color: #fff;
+  text-align: center;
+}
+
+.webapps h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00bfff; /* Cor de destaque, pode ser personalizada */
+}
+
+.webapps p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #c9d1d9;
+}
+
+.webapps .cards-webapps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.webapps .card-webapp {
+  background-color: #161b22;
+  padding: 30px;
+  border-radius: 16px;
+  flex: 1 1 250px;
+  transition: 0.3s;
+  text-align: center;
+  color: white;
+}
+
+.webapps .card-webapp:hover {
+  background-color: #1f2937;
+  transform: translateY(-5px);
+}
+
+.webapps .card-webapp h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.webapps .card-webapp p {
+  color: #c9d1d9;
+  font-size: 16px;
+}
