@@ -10,6 +10,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+<!-- Chatbot Moderno Botpress -->
+<style>
+  #chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #chatbot-button {
+    background-color: #00bfff;
+    border: none;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  #chatbot-button:hover {
+    transform: scale(1.1);
+  }
+
+  #chatbot-iframe {
+    display: none;
+    border: none;
+    width: 380px;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @media (max-width: 480px) {
+    #chatbot-iframe {
+      width: 90vw;
+      height: 75vh;
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<div id="chatbot-container">
+  <iframe 
+    id="chatbot-iframe"
+    src="https://cdn.botpress.cloud/webchat/v1/index.html?botId=seu-bot-id-aqui&host=https://cdn.botpress.cloud/webchat/v1"
+  ></iframe>
+  <button id="chatbot-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chat" style="width: 30px; height: 30px;" />
+  </button>
+</div>
+
+<script>
+  const chatbotBtn = document.getElementById('chatbot-button');
+  const chatbotIframe = document.getElementById('chatbot-iframe');
+
+  let chatbotVisible = false;
+
+  chatbotBtn.addEventListener('click', () => {
+    chatbotVisible = !chatbotVisible;
+    chatbotIframe.style.display = chatbotVisible ? 'block' : 'none';
+  });
+
+</script>
+
 <body>
   <header class="header">
     <div class="container header-container">
